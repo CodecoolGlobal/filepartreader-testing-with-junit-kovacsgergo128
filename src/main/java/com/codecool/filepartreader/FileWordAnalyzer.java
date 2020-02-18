@@ -16,7 +16,7 @@ public class FileWordAnalyzer {
         String[] words = this.fpr.readLines().split("\\W+");
         Arrays.sort(words);
 
-        return Arrays.asList((words));
+        return Arrays.asList(words);
     }
 
     public List<String> getWordsContainingSubstring(String subString) throws FileNotFoundException {
@@ -34,6 +34,8 @@ public class FileWordAnalyzer {
     }
 
     private boolean checkIfPalindrome(String word) {
+        if (word.length() < 2) return false;
+
         String wordLower = word.toLowerCase();
         for (int i = 0; i < word.length() / 2; i++) {
             if (wordLower.charAt(i) != wordLower.charAt(word.length() - 1 - i))
