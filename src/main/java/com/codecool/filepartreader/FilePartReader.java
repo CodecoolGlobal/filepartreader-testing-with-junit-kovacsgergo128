@@ -9,10 +9,25 @@ import java.util.stream.Collectors;
 public class FilePartReader {
 
     private String filePath;
-    private int fromLine;
-    private int toLine;
+    private Integer fromLine;
+    private Integer toLine;
 
     public FilePartReader() {
+        this.filePath = "/sample/file/path/sample.txt";
+        this.fromLine = 1;
+        this.toLine = 10;
+    }
+
+    public String getFilePath() {
+        return filePath;
+    }
+
+    public int getFromLine() {
+        return fromLine;
+    }
+
+    public int getToLine() {
+        return toLine;
     }
 
     public void setup(String filepath, int fromLine, int toLine) {
