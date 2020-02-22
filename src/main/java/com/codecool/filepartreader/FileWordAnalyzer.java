@@ -14,7 +14,7 @@ public class FileWordAnalyzer {
 
     public List<String> getWordsOrderedAlphabetically() throws FileNotFoundException {
         String[] words = this.fpr.readLines().split("\\W+");
-        Arrays.sort(words);
+        Arrays.sort(words, String.CASE_INSENSITIVE_ORDER);
 
         return Arrays.asList(words);
     }
